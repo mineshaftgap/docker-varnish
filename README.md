@@ -1,2 +1,1 @@
-# docker-varnish
-IF Fulcrum Docker Varnish
+# IF Fulcrum Docker Varnish

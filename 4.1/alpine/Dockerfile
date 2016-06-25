@@ -1,4 +1,4 @@
-FROM fulcrum/alpine3.4
+FROM fulcrum/alpine
 MAINTAINER IF Fulcrum "fulcrum@ifsight.net"
 
 RUN echo "Cache bust 201606232004" && \

@@ -1,5 +1,5 @@
 # edge is 3.7 currently
-FROM fulcrum/alpine:edge
+FROM alpine:edge
 MAINTAINER IF Fulcrum "fulcrum@ifsight.net"
 
 RUN echo "Cache bust 201710090000" && \
@@ -8,4 +8,4 @@ RUN echo "Cache bust 201710090000" && \
 
 ENTRYPOINT ["/usr/sbin/varnishd"]
 
-CMD ["-F","-P","/run/varnish.pid","-a",":80","-f","/etc/varnish/default.vcl","-S","/etc/varnish/secret","-T","0.0.0.0:6082","-t","120","-s","malloc,128M","-p","feature=+http2"]
+CMD ["-F","-P","/run/varnish.pid","-a",":80,PROXY","-f","/etc/varnish/default.vcl","-S","/etc/varnish/secret","-T","0.0.0.0:6082","-t","120","-s","malloc,128M","-p","feature=+http2"]

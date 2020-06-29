@@ -3,6 +3,9 @@ MAINTAINER IF Fulcrum "fulcrum@ifsight.net"
 
 ENV BUILDDATE 202006011816
 
+COPY version-current.sh /version-current.sh
+COPY version-updated.sh /version-updated.sh
+
 RUN apk update && apk upgrade && \
     apk --no-cache add varnish
 

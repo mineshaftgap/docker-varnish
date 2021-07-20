@@ -1,7 +1,7 @@
 FROM alpine:3.13
 MAINTAINER IF Fulcrum "fulcrum@ifsight.net"
 
-ENV BUILDDATE 202107200805
+ENV BUILDDATE 202107200806
 
 COPY version-current.sh /version-current.sh
 COPY version-updated.sh /version-updated.sh
